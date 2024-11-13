@@ -1,3 +1,6 @@
 [submodule "backend-app"]
 	path = backend-app
 	url = git@github.com:localize-ai/backend-app.git
+[submodule "llm-app"]
+	path = llm-app
+	url = git@github.com:localize-ai/llm-app.git
