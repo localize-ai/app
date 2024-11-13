@@ -4,3 +4,6 @@
 [submodule "llm-app"]
 	path = llm-app
 	url = git@github.com:localize-ai/llm-app.git
+[submodule "client-app"]
+	path = client-app
+	url = git@github.com:localize-ai/client-app.git
