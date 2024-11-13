@@ -17,6 +17,7 @@ Localizeai is an innovative social media platform designed to enhance culinary e
 - [Design System](#design-system)
 - [UI UX Design](#ui-ux-design)
 - [Tech Stack](#tech-stack)
+- [LLM Architecture](#llm-architecture)
 - [Timeline](#timeline)
 - [Repository Link](#repository-link)
 
@@ -97,6 +98,22 @@ Localizeai is an innovative social media platform designed to enhance culinary e
 ## Tech Stack
 ![Tech Stack](./asset/app-architecture.png)
 
+
+## LLM Architecture
+
+![Arhchitecture](./asset/llm-architecture.png)
+
+- **Backend**: [FastAPI](https://fastapi.tiangolo.com/) - For building a fast, efficient RESTful API.
+- **Database**: [MongoDB](https://www.mongodb.com/) - Used to store and manage vectorized data for both images and text search.
+- **Embedding Model**: [CLIP-ViT-L-14](https://huggingface.co/openai/clip-vit-large-patch14) - Used for generating embeddings from text and images, making search more accurate and relevant.
+- **Tokenizer**: [openai/clip-vit-large-patch14](https://huggingface.co/openai/clip-vit-large-patch14) - Tokenizes input text for compatibility with CLIP-ViT-L-14.
+- **LLM Models**:
+  - **Primary**: Amazon Bedrock (Llama) - Used for dynamic keyword and context understanding.
+  - **Secondary**: GroqCloud (Llama) - Used as a fallback if Bedrock is unavailable.
+- **Other Libraries**:
+  - **LangChain** - For efficient LLM application management and language chaining.
+  - **LangSmith** - Enhances observability for debugging and model performance monitoring.
+  - **PyMongo** - Provides a native Python driver for MongoDB interactions.
 
 ## Timeline
 ![Timeline](./asset/localizeai-calendar.png)
